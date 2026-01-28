@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  backend:
+    image: thumbgen-backend
+    container_name: thumbgen-backend
+    ports:
+      - "5000:3000"
+    env_file:
+      - ./server/.env
+
+  frontend:
+    image: thumbgen-client
+    container_name: thumbgen-client
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

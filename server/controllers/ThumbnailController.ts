@@ -2,7 +2,8 @@ import { Request, Response } from 'express';
 import Thumbnail from '../models/Thumbnail.js';
 import { GenerateContentConfig, HarmBlockThreshold, HarmCategory } from '@google/genai';
 import ai from '../configs/ai.js';
-import { v2 as cloudinary } from 'cloudinary';
+import cloudinary from "../cloudinary";
+
 
 const stylePrompts = {
     'Bold & Graphic': 'eye-catching thumbnail, bold typography, vibrant colors, expressive facial reaction, dramatic lighting, high contrast, click-worthy composition, professional style',
